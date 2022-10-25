@@ -1,12 +1,4 @@
-from typing import Union
-import uvicorn
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
 # 获取轮播图数据接口
-@app.get("/swiper")
 def swiper():
     return {
         "meta": {
@@ -36,6 +28,3 @@ def swiper():
             }
         ],
     }
-
-
-uvicorn.run(app, host="127.0.0.1", port=8080)
